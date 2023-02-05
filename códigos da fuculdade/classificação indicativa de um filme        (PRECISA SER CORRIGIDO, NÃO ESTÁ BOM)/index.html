@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <h1>classificação etaria de filmes</h1>
+    
+    <label for="idade">Informe sua idade</label>
+    <input type="number" name="idade" id="idade" min="1" max="90"required><br>
+    <input type="button" value="verificar" id="button" onclick="filmes()">
+    <div id="filmes"></div>
+
+    <script>
+        
+        function filmes(){
+        var idade = parseInt(document.querySelector("#idade").value)
+        var filmes = document.querySelector("#filmes")
+        
+            if(idade <= 10){
+                filmes.innerHTML =`
+                                
+                    <h2 class='texto-subtitulo'>Filmes Indicados para todas faixas etárias</h2>
+
+                    <ul>
+                        <li>
+                            <img  class='capa-filmes' src ='imagens/caras malvados.jpg'>
+                            <p class ='titulo-filme'>Os caras malvados</p>
+                        </li>
+
+                        <li>
+                            <img class='capa-filmes' src ='imagens/cegonhas.webp'>
+                            <p class ='titulo-filme'></p>
+                        </li>
+                        
+                        <li>
+                            <img class='capa-filmes' src ='imagens/coração de fogo.jpg'>
+                            <p class ='titulo-filme'></p>
+                        </li>
+                        
+                        <li>
+                            <img class='capa-filmes' src ='imagens/fabrica de chocolate.jpg'>
+                            <p class ='titulo-filme'></p>
+                        </li>
+                        
+                        <li>
+                            <img class='capa-filmes' src ='imagens/ferias mr bean.jpg'>
+                            <p class ='titulo-filme'></p>
+                        </li>
+                        
+                        <li>
+                            <img class='capa-filmes' src ='imagens/lorax.webp'>
+                            <p class ='titulo-filme'></p>
+                        </li>
+                        <li>
+                            <img class='capa-filmes' src ='imagens/mundo estranho.jpg'>
+                            <p class ='titulo-filme'></p>
+                        </li>`
+                    }else if(idade >=11 && idade <= 17){
+
+                        filmes.innerHTML =`                      
+                                                    
+                        <h2 class='texto-subtitulo'>Filmes Indicados para sua idade</h2>
+
+                        <ul>
+                            <li>
+                                <img  class='capa-filmes' src ='imagens/adolescente 1.jpg'>
+                                <p class ='titulo-filme'>Os caras malvados</p>
+                            </li>
+
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 2.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 3.jpg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 4.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 5.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 6.jpg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                        </ul>
+                            
+                            `
+             }else if(idade >=18){
+                filmes.innerHTML =`                      
+                                                    
+                        <h2 class='texto-subtitulo'>Filmes Indicados para maiores de idade</h2>
+
+                        <ul>
+                            <li>
+                                <img  class='capa-filmes' src ='imagens/adolescente 1.jpg'>
+                                <p class ='titulo-filme'>Os caras malvados</p>
+                            </li>
+
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 2.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 3.jpg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 4.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 5.jpeg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                            
+                            <li>
+                                <img class='capa-filmes' src ='imagens/adolescente 6.jpg'>
+                                <p class ='titulo-filme'></p>
+                            </li>
+                        </ul>
+                            
+                            `
+                
+            }else{
+                window.alert("digite sua idade")
+            }}
+
+                
+                
+        
+        
+
+
+    </script>
+</body>
+</html>

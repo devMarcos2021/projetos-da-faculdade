@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lcadora virtual</title>
+    <style>
+        body{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>classificação indicativa de filmes</h1>
+
+    <h2>digite os dados abaixo</h2>
+
+    <p>Digite sua idade
+        <input type="number" id="idade" min="0" max="120"></p>
+
+    <p>Digite a faixa etária indicada no filmes
+        <input type="number" id="indicaçao" min="0" max="18"></p>
+
+    <input type="button" value="Verificar" onclick="verificar()" id="button">
+
+    <div class="resposta"></div>
+
+    <script>
+       
+
+        function verificar(){
+
+            var idade = parseInt(document.querySelector("#idade").value)
+            var indicaçao = parseInt(document.querySelector("#indicaçao").value)
+            var resposta = document.querySelector(".resposta")
+
+            //condição para que o cliente alugue filme de acordo com a faixa etária adequada!
+             if(idade < 18 && indicaçao >= 18){
+                resposta.innerHTML="Esse filme é indicado apenas para maiores de 18 anos";
+            }else if(idade <14 && indicaçao >=14){
+                resposta.innerHTML="Esse filme é indicado apenas para maiores de 14 anos";
+            }else if(idade <10 && indicaçao >=10){
+                resposta.innerHTML="Esse filme é indicado apenas para maiores de 10 anos";
+            }else{
+                resposta.innerHTML="Esse filme é indicado para sua idade";
+            }
+        }
+    </script>
+    
+</body>
+</html>

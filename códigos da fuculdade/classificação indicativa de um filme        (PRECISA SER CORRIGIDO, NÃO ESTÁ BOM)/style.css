@@ -1,0 +1,21 @@
+body{
+    text-align:center;
+}
+
+.capa-filmes{
+    
+    height:200px;
+    margin-left:20px;
+    
+
+}
+
+li{
+    display:inline-block;
+    
+    
+}
+
+#anoA{
+    text-align:center;
+}
